@@ -6,22 +6,32 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "init-db": "node database/init.js"
+    "init-db": "node database/init.js",
+    "postinstall": "npm rebuild sqlite3 --build-from-source || true"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "sqlite3": "^5.1.6",
-    "cors": "^2.8.5",
-    "multer": "^1.4.5-lts.1",
     "bcryptjs": "^2.4.3",
-    "jsonwebtoken": "^9.0.1",
+    "better-sqlite3": "^12.2.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "nodemailer": "^6.9.7"
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
   },
-  "keywords": ["citizen", "reporting", "dashboard", "city"],
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": [
+    "citizen",
+    "reporting",
+    "dashboard",
+    "city"
+  ],
   "author": "CityCompass Team",
   "license": "MIT"
 }
